@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moaz Ahmed | Software Engineer</title>
+  <meta name="description" content="Professional portfolio of Moaz Ahmed, a Software Engineer with expertise in Python, C++, C#, and database technologies. View projects, skills, and experience.">
+  <meta property="og:title" content="Moaz Ahmed | Software Engineer">
+  <meta property="og:description" content="Professional portfolio of Moaz Ahmed, a Software Engineer with expertise in Python, C++, C#, and database technologies.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="flex justify-between items-center h-16">
+        <a href="#" class="text-xl font-bold" style="color: var(--accent-primary);">
+          Moaz Ahmed
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-6">
+        <a href="#about" class="nav-item active hover:text-blue-500 transition-colors" style="color: var(--text-secondary);" id="about-link">About</a>
+        <a href="#education" class="nav-item hover:text-blue-500 transition-colors" style="color: var(--text-secondary);" id="education-link">Education</a>
+        <a href="#experience" class="nav-item hover:text-blue-500 transition-colors" style="color: var(--text-secondary);" id="experience-link">Experience</a>
+        <a href="#projects" class="nav-item hover:text-blue-500 transition-colors" style="color: var(--text-secondary);" id="projects-link">Projects</a>
+        <a href="#skills" class="nav-item hover:text-blue-500 transition-colors" style="color: var(--text-secondary);" id="skills-link">Skills</a>
+        <a href="#awards" class="nav-item hover:text-blue-500 transition-colors" style="color: var(--text-secondary);" id="awards-link">Awards</a>
+        <a href="#contact" class="nav-item hover:text-blue-500 transition-colors" style="color: var(--text-secondary);" id="contact-link">Contact</a>
+        </div>
+
+        
+        <div class="flex items-center space-x-2">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block dark-icon-hidden"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden dark-icon-visible"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+          
+          <!-- Mobile Menu Button -->
+          <button id="menu-open" class="md:hidden p-2 rounded-md" style="color: var(--text-primary);" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+      <div id="menu-backdrop" class="menu-backdrop"></div>
+      
+      <div id="menu-content" class="menu-content">
+        <div class="flex items-center justify-between px-6 pt-8 pb-6">
+          <span class="text-xl font-bold" style="color: var(--accent-primary);">Moaz Ahmed</span>
+          <button id="menu-close" class="p-2 rounded-full" style="color: var(--text-primary);" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        
+        <nav class="flex-1 px-6 pb-6 overflow-y-auto">
+          <ul class="space-y-6 py-6">
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#education" class="mobile-link">Education</a></li>
+            <li><a href="#experience" class="mobile-link">Experience</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#skills" class="mobile-link">Skills</a></li>
+            <li><a href="#awards" class="mobile-link">Awards</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+          </ul>
+          
+          <div class="pt-6 mt-6 border-t" style="border-color: var(--border-color);">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium" style="color: var(--text-muted);">Switch Theme</span>
+              <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <svg id="mobile-sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block dark-icon-hidden"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg id="mobile-moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden dark-icon-visible"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              </button>
+            </div>
+            
+            <div class="mt-8 flex space-x-4">
+              <a href="https://github.com/MoazAhmedS" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
+              <a href="http://www.linkedin.com/in/engmoazahmed" target="_blank" rel="noopener noreferrer" class="social-link" style="color: var(--accent-primary); background-color: rgba(59, 130, 246, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a href="mailto:moazahmed0101@gmail.com" class="social-link" style="color: var(--accent-primary); background-color: rgba(59, 130, 246, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="about" class="gradient-bg pt-20 pb-24">
+    <div class="container">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            Hi, I'm <span style="color: var(--accent-primary);">Moaz Ahmed</span>
+          </h1>
+          <h2 class="text-xl md:text-2xl mb-6" style="color: var(--text-secondary);">Software Engineer</h2>
+          <p class="max-w-lg mb-8" style="color: var(--text-secondary);">
+            A passionate computer science graduate with expertise in building efficient systems,
+            from military service management to store operations. Skilled in Python, C++, C#, 
+            and various database technologies.
+          </p>
+          
+          <div class="flex space-x-4">
+            <a href="mailto:moazahmed0101@gmail.com" class="btn btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Contact Me</span>
+            </a>
+            <a href="https://github.com/MoazAhmedS" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative w-64 h-64 rounded-full overflow-hidden border-4 shadow-xl" style="border-color: var(--bg-card);">
+            <div class="w-full h-full bg-blue-500 flex items-center justify-center text-white text-4xl font-bold">
+              <img width="300px" src="https://i.postimg.cc/9Mfx7KdB/profile-Pic.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      
+      <div class="max-w-3xl mx-auto">
+        <div class="card p-6 mb-6">
+          <div class="flex flex-col md:flex-row justify-between mb-4">
+            <div>
+              <h3 class="text-xl font-semibold">B.S. in Computer Science</h3>
+              <p style="color: var(--text-secondary);">Egypt E-Learning University</p>
+            </div>
+            <div class="mt-2 md:mt-0">
+              <p style="color: var(--text-secondary);">Sep 2019 - Jun 2023</p>
+              <p style="color: var(--accent-primary);">GPA: 3.49 (Very good)</p>
+            </div>
+          </div>
+          <p style="color: var(--text-secondary);">Graduation Project Grade: Excellent</p>
+          
+          <div class="mt-4 pt-4 border-t" style="border-color: var(--border-color);">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: rgba(59, 130, 246, 0.1); color: var(--accent-primary);">
+                Volunteer
+              </span>
+              <p style="color: var(--text-secondary);">
+                Instructor of the ICPC community in EELU Assiut
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section" style="background-color: var(--bg-primary);">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      
+      <div class="max-w-4xl mx-auto">
+        <!-- Experience 1 -->
+        <div class="mb-12">
+          <div class="flex flex-col md:flex-row items-start gap-6">
+            <div class="md:w-1/3">
+              <h3 class="text-xl font-semibold" style="color: var(--text-primary);">Military Service Management System</h3>
+              <p style="color: var(--text-secondary);" class="mb-1">Oct 2023 – Nov 2024</p>
+              <p style="color: var(--text-secondary);" class="mb-2">Alexandria, Egypt</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-block px-3 py-1 rounded-full text-sm font-medium" style="background-color: rgba(59, 130, 246, 0.1); color: var(--accent-primary);">C#</span>
+                <span class="inline-block px-3 py-1 rounded-full text-sm font-medium" style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;">SQL</span>
+              </div>
+            </div>
+            
+            <div class="md:w-2/3 card p-6">
+              <ul class="list-disc ml-5 space-y-2" style="color: var(--text-secondary);">
+                <li>Custom Database Design and Secure Data Organization: Developed a normalized database with strict access controls, reducing data retrieval time by 70% for rapid access to sensitive information in daily operations.</li>
+                <li>Attendance, Vacations, and Health Tracking: Maintained up-to-date records of personnel attendance, absences, vacation schedules, health statuses, and penalties.</li>
+                <li>Task-based Reporting and Instant Data Printing: Enabled quick task-specific search, report generation, providing easy access for inspections or urgent needs.</li>
+                <li>User Roles and Permissions: Established role-based permissions to secure confidential data, allowing only authorized users to access or modify information.</li>
+                <li>Data Change Tracking: Implemented audit trails for all data changes to ensure accountability and maintain an organized record of updates.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Experience 2 -->
+        <div>
+          <div class="flex flex-col md:flex-row items-start gap-6">
+            <div class="md:w-1/3">
+              <h3 class="text-xl font-semibold" style="color: var(--text-primary);">Store Management System Development</h3>
+              <p style="color: var(--text-secondary);" class="mb-1">Jul 2023 – Oct 2023</p>
+              <p style="color: var(--text-secondary);" class="mb-2">Asyut, Egypt</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-block px-3 py-1 rounded-full text-sm font-medium" style="background-color: rgba(168, 85, 247, 0.1); color: #a855f7;">C++</span>
+                <span class="inline-block px-3 py-1 rounded-full text-sm font-medium" style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;">SQL</span>
+              </div>
+            </div>
+            
+            <div class="md:w-2/3 card p-6">
+              <ul class="list-disc ml-5 space-y-2" style="color: var(--text-secondary);">
+                <li>Category & Item Management: Organized items with properties like minimum stock, sale prices, and unit types, reducing categorization time by 30%.</li>
+                <li>Inventory Monitoring: Tracked low-stock items, ensuring timely restocking, reducing stockouts by 25%.</li>
+                <li>Customer Accounts: Maintained customer purchase histories, enhancing transaction tracking and relationship management.</li>
+                <li>User Accounts: Set up operator accounts with customizable permissions, ensuring data security and efficient workflows.</li>
+                <li>Sales & Invoices: Analyzed sales, profits, payments by date or customer, boosting speed by 40%.</li>
+                <li>Returns Management: Processed item returns via invoice tracking, cutting return time by 20%.</li>
+                <li>Inventory Valuation: Estimated inventory value and profit, aiding strategic pricing decisions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section id="projects" class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Project 1 -->
+        <div class="card overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg duration-300">
+          <div class="h-48 bg-blue-500 flex items-center justify-center">
+            <img  width="800px" src="https://i.postimg.cc/8C4KsN65/sub.png" alt="">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-3">
+              <h3 class="text-xl font-semibold" style="color: var(--text-primary);">MKV Subtitle Manager</h3>
+              <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: rgba(59, 130, 246, 0.1); color: var(--accent-primary);">Python</span>
+            </div>
+            <p style="color: var(--text-secondary);" class="mb-4">
+              Developed a Python GUI app for extracting and replacing MKV subtitles in multiple languages.
+            </p>
+            <ul class="list-disc ml-5 mb-4 text-sm" style="color: var(--text-secondary);">
+              <li>Features batch processing, episode matching, and customizable settings</li>
+              <li>Built with Tkinter (GUI) and pymkv (MKV manipulation)</li>
+              <li>Handles complex file structures while maintaining metadata</li>
+              <li>Demonstrates Python automation, file handling, and user-friendly design</li>
+            </ul>
+            <div class="flex justify-end">
+              <a href="https://github.com/MoazAhmedS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center hover:underline" style="color: var(--accent-primary);">
+                View Project 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="card overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg duration-300">
+          <div class="h-48 bg-green-500 flex items-center justify-center">
+                <img  width="600px" src="https://i.postimg.cc/GhT5KWZ7/food.jpg" alt="">
+
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-3">
+              <h3 class="text-xl font-semibold" style="color: var(--text-primary);">Food Calorie Estimation</h3>
+              <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: rgba(59, 130, 246, 0.1); color: var(--accent-primary);">Python</span>
+            </div>
+            <p style="color: var(--text-secondary);" class="mb-4">
+              AI-powered system to estimate food calories and nutritional content using image analysis.
+            </p>
+            <ul class="list-disc ml-5 mb-4 text-sm" style="color: var(--text-secondary);">
+              <li>Implemented a CNN model based on MobileNetV3 with transfer learning</li>
+              <li>Applied advanced preprocessing techniques for improved data quality</li>
+              <li>Automated dietary assessment for precise nutritional insights</li>
+              <li>Simplified configuration for broader accessibility</li>
+              <li>Conducted extensive testing for reliability and scalability</li>
+            </ul>
+            <div class="flex justify-end">
+              <a href="https://github.com/MoazAhmedS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center hover:underline" style="color: var(--accent-primary);">
+                View Project 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section id="skills" class="section" style="background-color: var(--bg-primary);">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Programming Languages -->
+          <div class="card p-6">
+            <h3 class="text-xl font-semibold mb-4 flex items-center" style="color: var(--text-primary);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" style="color: var(--accent-primary);"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              Programming Languages
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag" style="background-color: rgba(168, 85, 247, 0.1); color: #a855f7;">C++</span>
+              <span class="skill-tag" style="background-color: rgba(79, 70, 229, 0.1); color: #4f46e5;">C#</span>
+              <span class="skill-tag" style="background-color: rgba(245, 158, 11, 0.1); color: #f59e0b;">JavaScript</span>
+              <span class="skill-tag" style="background-color: rgba(239, 68, 68, 0.1); color: #ef4444;">Java</span>
+            </div>
+          </div>
+          
+          <!-- Databases -->
+          <div class="card p-6">
+            <h3 class="text-xl font-semibold mb-4 flex items-center" style="color: var(--text-primary);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" style="color: var(--accent-primary);"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              Databases
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag" style="background-color: rgba(249, 115, 22, 0.1); color: #f97316;">MySQL</span>
+              <span class="skill-tag" style="background-color: rgba(79, 70, 229, 0.1); color: #4f46e5;">PostgreSQL</span>
+            </div>
+          </div>
+          
+          <!-- Problem Solving -->
+          <div class="card p-6">
+            <h3 class="text-xl font-semibold mb-4 flex items-center" style="color: var(--text-primary);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" style="color: var(--accent-primary);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              Problem Solving
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag" style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;">Data Structures</span>
+              <span class="skill-tag" style="background-color: rgba(20, 184, 166, 0.1); color: #14b8a6;">Algorithms</span>
+            </div>
+          </div>
+          
+          <!-- Others -->
+          <div class="card p-6">
+            <h3 class="text-xl font-semibold mb-4 flex items-center" style="color: var(--text-primary);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" style="color: var(--accent-primary);"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              Others
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag" style="background-color: var(--bg-secondary); color: var(--text-secondary);">SOLID Principles</span>
+              <span class="skill-tag" style="background-color: var(--bg-secondary); color: var(--text-secondary);">Git</span>
+              <span class="skill-tag" style="background-color: var(--bg-secondary); color: var(--text-secondary);">GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Awards Section -->
+  <section id="awards" class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <h2 class="section-title">Awards & Certifications</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Awards -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6 text-center" style="color: var(--text-primary);">Awards</h3>
+          <div class="card p-6 transition-all hover:-translate-y-1 hover:shadow-lg duration-300">
+            <div class="flex items-start gap-4">
+              <div class="mt-1" style="color: var(--accent-primary);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-medium" style="color: var(--text-primary);">ACPC Finalist</h4>
+                <p style="color: var(--text-secondary);">ICPC - International Collegiate Programming Contest</p>
+                <p class="mt-1" style="color: var(--text-muted);">September 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Certifications -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6 text-center" style="color: var(--text-primary);">Certifications</h3>
+          <div class="space-y-4">
+            <div class="card p-6 transition-all hover:-translate-y-1 hover:shadow-lg duration-300">
+              <div class="flex items-start gap-4">
+                <div class="mt-1" style="color: var(--accent-primary);">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium" style="color: var(--text-primary);">ALX Software Engineering</h4>
+                  <p class="mt-1" style="color: var(--text-muted);">April 2023 – July 2024</p>
+                  <p class="text-sm" style="color: var(--text-secondary);">12 Month Program</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card p-6 transition-all hover:-translate-y-1 hover:shadow-lg duration-300">
+              <div class="flex items-start gap-4">
+                <div class="mt-1" style="color: var(--accent-primary);">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium" style="color: var(--text-primary);">Problem Solving Level 3</h4>
+                  <p style="color: var(--text-secondary);">Coach Academy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section" style="background-color: var(--bg-primary); background-image: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      
+      <div class="max-w-lg mx-auto p-6 card shadow-lg">
+        <div class="flex justify-center space-x-4 mb-6">
+          <a href="mailto:moazahmed0101@gmail.com" class="social-link" style="color: var(--accent-primary); background-color: rgba(59, 130, 246, 0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+          <a href="https://github.com/MoazAhmedS" target="_blank" rel="noopener noreferrer" class="social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="http://www.linkedin.com/in/engmoazahmed" target="_blank" rel="noopener noreferrer" class="social-link" style="color: var(--accent-primary); background-color: rgba(59, 130, 246, 0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+        
+        <div class="text-center">
+          <p style="color: var(--text-secondary);" class="mb-2">Asyut, Egypt</p>
+          <p style="color: var(--text-secondary);">moazahmed0101@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t" style="background-color: var(--bg-card); border-color: var(--border-color);">
+    <div class="container">
+      <div class="text-center">
+        <p style="color: var(--text-muted);">© <span id="current-year"></span> Moaz Ahmed. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>
