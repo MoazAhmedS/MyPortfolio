@@ -1,7 +1,7 @@
 <h1 align="center"><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHYxbjRvazNqbGM4NDVvcmpiczZzODYweWpqc3RraG54ZDBkYmVxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/5Qcx4jScEeYGe9rz3o/giphy.gif" width="80%"> <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></h1>
 
 <p align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&width=435&lines=Hello..+I'm+Moaz+Ahmed;A+Software+Engineer;Graduated+from+Egyptian+E-Learning+University;ACPC+Finalist+-+ICPC+Regional+2023;using+Software+as+a+solution+for+every+Problem;Always+learning+new+things" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&width=435&lines=Hello..+I'm+Moaz+Ahmed;A+Software+Engineer;Graduated+from+EELU;ACPC+Finalist+-+ICPC+Regional+2023;using+Software+as+a+solution+for+every+Problem;Always+learning+new+things" alt="Typing SVG" /></a>
 </p>
 
 ---
